@@ -1,0 +1,50 @@
+﻿@using DatabaseContext.ViewModels;
+@model CustIndexViewModel
+@{ ViewData["Title"] = "Index";
+                Layout = "~/Views/Shared/customerlayout.cshtml"; }
+
+<h1>MCBA Netbank</h1>
+<br>
+<h1 class="accttl">My Accounts</h1>
+
+@if (Model.Accounts.Count == 0)
+{
+<p1> No Accounts Opened for this customer</p1> }
+            else
+            {
+<table class="table-bordered table-light  table-hover">
+    <thead>
+        <tr>
+            <th>Account Number</th>
+            <th>Balance</th>
+            <th>View Statement</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Account acc in Model.Accounts)
+        {
+<tr>
+    <td>@acc.AccountNumber</td>
+    <td>$@Html.DisplayFor(x=> Model.Balances[acc.AccountNumber])</td>
+    <td>
+        @Html.ActionLink("ATM", "atm", "Customer", new { accnum = acc.AccountNumber }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Transfer", "Transfer", "Customer", new { accnum = acc.AccountNumber, balance = Model.Balances[acc.AccountNumber] }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Statement", "Statement", "Customer", new { accnum = acc.AccountNumber }, new { @class = "btn btn-primary" })
+
+    </td>
+</tr>}
+    </tbody>
+</table>}
+@section Styles{
+
+    <link rel="stylesheet" href="~/css/custloginindex.css" />
+}
+
+
+
+
+
+
+
+

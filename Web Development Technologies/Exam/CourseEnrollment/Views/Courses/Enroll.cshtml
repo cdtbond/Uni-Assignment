@@ -1,0 +1,36 @@
+﻿@using CourseEnrollment.ViewModel
+@model EnrollViewModel
+@{ ViewData["Title"] = "Enroll";
+}
+<form method="Post">
+    <h2>Enroll a student in a Course</h2>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="SelectedStudentID" class="control-label"></label>
+        <select asp-for="SelectedStudentID" class="form-control">
+            @foreach (var student in Model.Students)
+            {
+                <option value=@student.StudentID> @student.FullName </option>
+            }
+        </select>
+        @Html.ValidationMessageFor(m => m.SelectedStudentID, "", new { @class = "text-danger" })
+        <label asp-for="SelectedCourseID" class="control-label"></label>
+        <select asp-for="SelectedCourseID" class="form-control">
+            @foreach (var course in Model.Courses)
+            {
+                <option value=@course.CourseID> @course.Title</option>
+            }
+        </select>
+        @Html.ValidationMessageFor(m => m.SelectedCourseID, "", new { @class = "text-danger" })
+    </div>
+    @Html.HiddenFor(x => x.SelectedCourseID)
+    @Html.HiddenFor(x => x.SelectedStudentID)
+    @Html.HiddenFor(x => x.Students)
+    @Html.HiddenFor(x => x.Courses)
+    <button type="submit">Enroll</button>
+    @Html.ActionLink("Cancel", "", new { Controller = "Home", Action = "Index" }, new { @class = "btn btn-primary" })
+
+</form>
+
+

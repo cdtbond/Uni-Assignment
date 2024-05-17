@@ -1,0 +1,16 @@
+﻿tbody > tr {
+    font-size: 20px;
+    font-family: Arial;
+}
+
+thead > tr {
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.translinks {
+    font-family: Arial;
+    color: white;
+    background-color: Highlight;
+    padding: 2px 6px 2px 6px;
+}

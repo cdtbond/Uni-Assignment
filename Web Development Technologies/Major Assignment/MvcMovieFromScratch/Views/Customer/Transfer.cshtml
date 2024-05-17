@@ -1,0 +1,61 @@
+﻿@using DatabaseContext.ViewModels;
+@model TransferViewModel;
+@{ ViewData["Title"] = "Transfer";
+                Layout = "~/Views/Shared/customerlayout.cshtml"; }
+
+<h1>Transfer Accounts</h1>
+<br>
+<p1 class="accttl"> Current Account:@Model.FromAccountNum</p1>
+<p1></p1>
+<br>
+<p1 class="balttl"> Current Balance:<span class="amtbal">$@Html.DisplayFor(x=>Model.Balance)</span></p1>
+<p1></p1>
+<form asp-action="TransferTransaction">
+
+    <br>
+    <div class="form-inline">
+        <label asp-for="ToAccountNum" class="control-label tolbl"></label>
+        <select asp-for="ToAccountNum" class="form-control accinp">
+            @foreach (Account account in Model.Accounts)
+            {<!-- Skip own account, can't transfer to self. --> if (account.AccountNumber != Model.FromAccountNum)
+                {
+<option value=@account.AccountNumber> @account.AccountNumber </option>
+}
+}
+        </select>
+    </div>
+    <br>
+
+    <br>
+    <label class="text-danger">@Html.ValidationMessageFor(m => m.ToAccountNum)</label>
+    <br>
+    <label class="amttl">Amount:</label>
+    <input asp-for="Amount" class="aminp">
+    <br>
+    <label class="text-danger">@Html.ValidationMessageFor(m => m.Amount)</label>
+    <br>
+    <div class="form-group">
+        <label asp-for="Comment" class="control-label commlbl">Comment:</label>
+        <textarea asp-for="Comment" class="form-control" rows="3" cols="30">
+    </textarea>
+    </div>
+    <br>
+    @Html.HiddenFor(m => m.Balance)
+    @Html.HiddenFor(m => m.FromAccountNum)
+    @Html.HiddenFor(m => m.Accounts)
+
+    <button type="submit" class="btn btn-primary">Transfer</button>
+
+    @Html.ActionLink("Cancel Transaction", "Index", "Customer", new { }, new { @class = "btn btn-primary" })
+
+
+
+
+
+
+
+</form>
+@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/css/transfer.css" />
+}
+

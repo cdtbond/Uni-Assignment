@@ -1,0 +1,56 @@
+﻿@using DatabaseContext.ViewModels;
+@using X.PagedList.Mvc.Core;
+@model AdminStatementViewModel
+@{ ViewData["Title"] = "Statement";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<h1>Transactions for Customer: @Model.CustNum</h1>
+<form asp-action="Statement">
+    <label>From:</label>
+    <input id="fromdate" type="text" asp-for="FromDate" />
+    <label>To:</label>
+    <input id="todate" type="text" asp-for="ToDate" />
+    <br>
+    @Html.ValidationMessageFor(m => m.ToDate)
+    <br>
+    <br>
+    <input id="custnum" style="visibility:hidden" type="text" asp-for="CustNum" />
+    <br>
+    <button type="submit">Search</button>
+
+</form>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Amount</th>
+            <th>Transaction Type</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Transaction tr in Model.Transactions)
+        {
+<tr>
+    <td>@tr.ModifyDate.ToLocalTime().ToString("dd/MM/yyyy hh:mm tt")</td>
+    <td>@tr.Amount</td>
+    <td>@tr.TransactionType</td>
+    <td>@tr.Comment</td>
+</tr>}
+    </tbody>
+</table>
+
+@Html.PagedListPager(Model.Transactions, page => Url.Action("Statement", "Admin", new { custnum = Model.CustNum, page = page, fromdate = Model.FromDate, todate = Model.ToDate }), new X.PagedList.Web.Common.PagedListRenderOptionsBase
+{
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" }
+})
+@Html.ActionLink("Back", "Index", "Admin", new { }, new { @class = "btn btn-primary" })
+
+
+@section Styles{
+    <script src="~/js/AdminStatement.js" type="text/javascript"></script>
+    <script src="~/js/jquery-ui.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="~/css/jquery-ui.css" />
+}
+

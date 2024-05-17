@@ -1,0 +1,91 @@
+﻿@using DatabaseContext.Models
+@model Customer
+@{
+    ViewData["Title"] = "Bill Pay";
+    Layout = "~/Views/Shared/customerlayout.cshtml";
+}
+<div>
+    <h2>Bill Pay Function for @Model.CustomerName</h2>
+
+    <!-- If there are failed transactions, then display them in a seperate table.-->
+    @foreach (Account account in Model.Accounts)
+    {
+        @if (account.BillPays.Exists(b => b.Status == BillPayStatus.Failed))
+        {
+            <h2>Failed BillPays for Account: @account.AccountNumber</h2>
+            <table class="table">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].Payee.PayeeName)</th>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].Amount)</th>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].ScheduleDate)</th>
+                    <th></th>
+                </tr>
+                @foreach (var bill in account.BillPays)
+                {
+                    if (bill.Status == BillPayStatus.Failed)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(x => bill.Payee.PayeeName)</td>
+                            <td>@Html.DisplayFor(x => bill.Amount)</td>
+                            <td>@bill.ScheduleDate.ToLocalTime().ToShortDateString()</td>
+                            <td>@Html.DisplayFor(x => bill.Period)</td>
+                            <td>
+                                <a class="btn btn-primary"
+                                   asp-action="Remove" asp-route-id="@bill.BillPayID">Remove</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+
+        }
+    }
+
+
+    @foreach (Account account in Model.Accounts)
+    {
+        <h2>Account @account.AccountNumber</h2>
+
+        @if (account.BillPays.Exists(b => b.Status != BillPayStatus.Failed))
+        {
+            <table class="table">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].Payee.PayeeName)</th>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].Amount)</th>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].ScheduleDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.Accounts[0].BillPays[0].Period)</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach (var bill in account.BillPays)
+                {
+                    var status = bill.Status;
+                    if (status != BillPayStatus.Failed && bill != null)
+                    {
+                        <tr>
+                            <td>@bill.Payee.PayeeName</td>
+                            <td>@Html.DisplayFor(x => bill.Amount)</td>
+                            <td>@bill.ScheduleDate.ToLocalTime().ToShortDateString()</td>
+                            <td>@bill.Period</td>
+                            <td>
+                                <a class="btn btn-primary"
+                                   asp-action="Modify" asp-route-id="@bill.BillPayID">Modify</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary"
+                                   asp-action="Remove" asp-route-id="@bill.BillPayID">Remove</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+        }
+        <div>
+            <a class="btn btn-primary"
+               asp-action="Create" asp-route-accountNumber="@account.AccountNumber">Add</a>
+        </div>
+    }
+
+
+
+</div>

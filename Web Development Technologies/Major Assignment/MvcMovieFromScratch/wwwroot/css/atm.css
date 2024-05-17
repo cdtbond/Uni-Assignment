@@ -1,0 +1,48 @@
+﻿.ttlbl{
+    font-size:25px;
+    font-family:Arial;
+    padding: 15px;
+}
+
+.accttl{
+    font-size:25px;
+    font-family:Arial;
+}
+
+.balttl {
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.ttypelbl{
+    font-size:20px;
+    font-family:Arial;
+}
+
+.ttypeinp {
+    width: 155px;
+    margin-left: 37px !important;
+    font-size: 15px;
+}
+
+.blance {
+    font-size: 25px;
+    font-family: Arial;
+    margin-left:84px;
+}
+
+.amtlbl {
+    font-size:25px;
+    font-family:Arial;
+}
+
+.comlbl{
+    font-size:22px;
+    font-family:Arial;
+}
+
+.amtinp {
+    width: 100px;
+    margin-left: 92px !important;
+    font-size: 15px;
+}

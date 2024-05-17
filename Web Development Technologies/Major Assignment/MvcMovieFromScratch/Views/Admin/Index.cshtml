@@ -1,0 +1,49 @@
+﻿@using DatabaseContext.ViewModels;
+@model AdminViewModel;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>MCBA Adminstration</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>LoginID</th>
+            <th>Actions</th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var lg in Model.Users)
+        {
+            if (lg.UserName != "admin")
+            {
+        <tr>
+            <td>@lg.Id</td>
+            <td>@lg.UserName</td>
+            <td class="actionrow">
+                @Html.ActionLink("Statement", "Statement", "Admin", new { custnum = lg.Id, fromdate = "", todate = "" }, new { @class = "btn btn-primary" })
+                <a class="btn btn-primary"
+                   asp-action="LockAccount" asp-route-id="@lg.Id">Lock Account</a>
+                @Html.ActionLink("Block a Bill", "BillPay", "Admin", new { custnum = lg.Id}, new { @class = "btn btn-primary" })
+            </td>
+
+        </tr>
+            }
+
+        }
+    </tbody>
+</table>
+@Html.HiddenFor(Model => Model.Users)
+<p1 id="statmsg"></p1>
+
+
+@section Styles{
+    <script type="text/javascript" src="~/js/adminindex.js"></script>
+}
+
+

@@ -1,0 +1,25 @@
+﻿
+@using DatabaseContext.ViewModels;
+@model LoginViewModel;
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Login to MCBA</h1>
+
+<form asp-action="login">
+    <label asp-for="LoginID" class="lbl"></label>
+    <input asp-for="LoginID" class="useridinp" />
+    <label>@Html.ValidationMessageFor(l=> l.LoginID)</label>
+    <br>
+    <label class="lbl" asp-for="Password"></label>
+    <input asp-for="Password" type="password" class="passwordinp"/>
+    <label>@Html.ValidationMessageFor(l => l.Password)</label>
+    <br>
+    <button class="btn btn-primary" type="submit">Login</button>
+</form>
+
+@section Style{ 
+<link rel="stylesheet" type="text/css" href="~/css/login.css"/>
+ }

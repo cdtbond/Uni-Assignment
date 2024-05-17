@@ -1,0 +1,41 @@
+﻿@using DatabaseContext.ViewModels;
+@using X.PagedList.Mvc.Core;
+
+@model StatementViewModel;
+@{ ViewData["Title"] = "Statement";
+                Layout = "~/Views/Shared/customerlayout.cshtml"; }
+
+<h1>Statement for Account:@Model.AccountNumber </h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Amount</th>
+            <th>Transaction Type</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Transaction tr in Model.Transactions)
+        {
+<tr>
+    <td>@tr.ModifyDate.ToLocalTime().ToString("dd/MM/yyyy hh:mm tt")</td>
+    <td>@Html.DisplayFor(x => tr.Amount)</td>
+    <td>@tr.TransactionType</td>
+    <td>@tr.Comment</td>
+</tr>
+}
+    </tbody>
+
+
+</table>
+@Html.PagedListPager(Model.Transactions, page => Url.Action("Statement", "Customer", new { page = page, accnum = Model.AccountNumber }), new X.PagedList.Web.Common.PagedListRenderOptionsBase
+{
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" }
+})
+@Html.ActionLink("Back", "Index", "Customer", new { }, new { @class = "btn btn-primary" })
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/custstatement.css" />
+} 

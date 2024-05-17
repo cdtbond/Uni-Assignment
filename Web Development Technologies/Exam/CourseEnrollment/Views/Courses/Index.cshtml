@@ -1,0 +1,91 @@
+﻿@using CourseEnrollment.ViewModel;
+@using X.PagedList.Mvc.Core;
+@model CourseViewModel;
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>All Courses</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>Title</th>
+            <th>Credit Points</th>
+            <th>Career</th>
+            <th>Coordinator</th>
+            <th>Select</th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        <!-- Loop through each Course-->
+        @foreach (var course in Model.Courses)
+        {
+
+        <tr>
+            <td>@course.CourseID</td>
+            <td>@course.Title</td>
+            <td>@course.CreditPoints</td>
+            <td>@course.Career</td>
+            <td>@course.Coordinator</td>
+
+            <td>
+                <form method="get" asp-action="Index" asp-route-id="@course.CourseID">
+                    <button type="submit" class="btn btn-primary">Select</button>
+                </form>
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+<h1>Students for selected Course</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Phone</th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @if (Model.SelectedEnrollment != null)
+        {
+            <!-- Don't display anything if null-->
+            <!-- Loop through each Instructor-->
+            @foreach (var student in Model.SelectedEnrollment)
+            {
+
+                <tr>
+                    <td>@student.Student.StudentID</td>
+                    <td>@student.Student.FullName</td>
+                    <td>@student.Student.Email</td>
+                    <td>@student.Student.MobilePhone</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@if (Model.SelectedEnrollment != null)
+{
+    @Html.PagedListPager(Model.SelectedEnrollment, page => Url.Action("Index", "Courses", new { id = Model.SelectedCourseID, page = page }), new X.PagedList.Web.Common.PagedListRenderOptionsBase
+{
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" }
+})
+}
+
+@Html.HiddenFor(x =>x.SelectedCourseID)
+
+
+
+
+

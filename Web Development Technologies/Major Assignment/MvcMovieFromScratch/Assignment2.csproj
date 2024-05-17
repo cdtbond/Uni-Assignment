@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\**" />
+    <Content Remove="ViewModels\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="MailKit" Version="2.10.1" />
+
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.2" />
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+    <PackageReference Include="SimpleHashing" Version="2.0.0.1" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Trello\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Account\AccessDenied.cshtml" />
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Account\OpenAccount.cshtml" />
+    <None Include="Views\Account\Register.cshtml" />
+    <None Include="Views\Admin\BillPay.cshtml" />
+    <None Include="Views\Admin\CreateRole.cshtml" />
+    <None Include="Views\Admin\EditUsersInRole.cshtml" />
+    <None Include="Views\Admin\Index.cshtml" />
+    <None Include="Views\Admin\ListRoles.cshtml" />
+    <None Include="Views\Admin\Statement.cshtml" />
+    <None Include="Views\BillPay\Create.cshtml" />
+    <None Include="Views\BillPay\Index.cshtml" />
+    <None Include="Views\BillPay\Modify.cshtml" />
+    <None Include="Views\Customer\atm.cshtml" />
+    <None Include="Views\Customer\Index.cshtml" />
+    <None Include="Views\Customer\NotFound.cshtml" />
+    <None Include="Views\Customer\Statement.cshtml" />
+    <None Include="Views\Customer\Transfer.cshtml" />
+    <None Include="Views\Home\Error.cshtml" />
+    <None Include="Views\Home\HttpErrors.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Components\AdminNavBar\Default.cshtml" />
+    <None Include="Views\Shared\Components\CustNavBar\Default.cshtml" />
+    <None Include="Views\Shared\customerlayout.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseContext\DatabaseContext.csproj" />
+  </ItemGroup>
+
+</Project>

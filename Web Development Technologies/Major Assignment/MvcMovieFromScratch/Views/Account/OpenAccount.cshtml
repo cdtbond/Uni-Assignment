@@ -1,0 +1,33 @@
+﻿@using DatabaseContext.ViewModels
+@model OpenAccountViewModel
+
+@{ 
+    ViewData["Title"] = "Open MCBA Account";
+    Layout = "~/Views/Shared/customerlayout.cshtml";
+}
+<h1> Open MCBA Account</h1>
+
+<div class= "row">
+       <div class="col-md-12">
+           <form method="post">
+               <div asp-validation-summary="All" class="text-danger"></div>
+               <div class="form-group">
+                   <label asp-for="Deposit"></label>
+                   <input asp-for="Deposit" class="form-control" />
+                   <span asp-validation-for="Deposit" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                   <label asp-for="TFN"></label>
+                   <input asp-for="TFN" class="form-control" />
+                   <span asp-validation-for="TFN" class="text-danger"></span>
+               </div>
+               <div class="form-group">
+                   <label asp-for="CustomerName"></label>
+                   <input asp-for="CustomerName" class="form-control" />
+                   <span asp-validation-for="CustomerName" class="text-danger"></span>
+               </div>
+               @Html.HiddenFor(x => Model.Id)
+               <button type="submit" class="btn btn-primary">Open Account</button>
+           </form>
+       </div>
+</div>

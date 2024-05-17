@@ -1,0 +1,13 @@
+﻿@using DatabaseContext.ViewModels
+@model HttpErrorViewModel;
+@{
+    ViewData["Title"] = "HttpErrors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>An Error has occured</h1>
+<br>
+<h1>@Model.HttpErrorMessage</h1>
+<br>
+<h2>@Model.Message</h2>
+

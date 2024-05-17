@@ -1,0 +1,14 @@
+﻿tbody > tr {
+    font-size: 25px;
+    font-family: Arial;
+    padding: 15px;
+}
+
+thead > tr {
+    font-size: 35px;
+    font-family: Arial;
+    padding: 15px;
+}
+
+
+

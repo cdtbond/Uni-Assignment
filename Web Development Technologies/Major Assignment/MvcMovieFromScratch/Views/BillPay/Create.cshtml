@@ -1,0 +1,53 @@
+﻿@using DatabaseContext.ViewModels;
+@model BillPayViewModel
+@{
+    ViewData["Title"] = "Add Bill to Account " + Model.AccountNumber;
+    Layout = "~/Views/Shared/customerlayout.cshtml";
+}
+
+<h2>Adding bill to Account @Model.AccountNumber</h2>
+<!-- Follows Tutorial 5 approach-->
+<div class= "row">
+    <div class="col-md-10">
+        <form asp-action="Create">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.EditorFor(model => model.Amount)
+                @Html.ValidationMessageFor(m => m.Amount,"",new { @class = "text-danger" })
+            </div>
+            <!-- Used this approach to date: https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view -->
+            <div class="form-group">
+                <label class="control-label">Schedule Date</label>
+                <div class="controls">
+                    <input asp-for="ScheduleDate" class="text-box single-line" data-val="true" data-val-date="The field Release Date must be a date." data-val-required="The Release Date field is required." id="ScheduleDate" name="ScheduleDate" type="datetime-local" />
+                    <span class="field-validation-valid help-inline" data-valmsg-for="ScheduleDate" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Period" class="control-label"></label>
+                <select asp-for="Period" class="form-control">
+                    @foreach (int id in Enum.GetValues(typeof(BillPayPeriod)))
+                    {
+                        <option value=@id> @Enum.ToObject(typeof(BillPayPeriod), id) </option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payee" class="control-label"></label>
+                <select asp-for="PayeeID" class="form-control">
+                    @foreach (Payee payee in Model.Payees)
+                    {
+                        <option value=@payee.PayeeID> @payee.PayeeName </option>
+                    }
+                </select>
+            </div>
+            @Html.HiddenFor(m => m.AccountNumber)
+            @Html.HiddenFor(m => m.Payees)
+            <button type="submit">Perform Transaction</button>
+            @Html.ActionLink("Cancel Transcation", "", new { Controller = "BillPay", Action = "Create" }, new { @class = "btn btn-primary" })
+        </form>
+        </div>
+
+    </div>

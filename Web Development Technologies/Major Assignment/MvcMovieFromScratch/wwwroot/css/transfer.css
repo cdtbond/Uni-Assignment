@@ -1,0 +1,54 @@
+﻿.ttlbl {
+    font-size: 22px;
+    font-family: Arial;
+    padding: 15px;
+}
+
+.accttl{
+    font-size:25px;
+    font-family:Arial;
+}
+
+.amtbal {
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.aminp{
+    margin-left:84px;
+}
+
+.amttl {
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.balttl {
+    font-size: 25px;
+    font-family: Arial;
+}
+
+.tolbl{
+    font-size:25px;
+    font-family:Arial;
+}
+
+.amtlbl {
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.commlbl{
+    font-size:25px;
+    font-family:Arial;
+}
+
+.amtinp{
+    width:120px;
+    font-size:16px;
+    margin-left:85px;
+}
+.accinp{
+    margin-left:18px;
+}
+

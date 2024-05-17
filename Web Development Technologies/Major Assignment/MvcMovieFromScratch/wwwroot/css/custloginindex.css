@@ -1,0 +1,9 @@
+﻿body {
+}
+
+
+thead > tr {
+    font-size: 22px;
+    font-family: Arial;
+    padding: 15px;
+}
