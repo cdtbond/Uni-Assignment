@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="203.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="670.0" text="Main Menu">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="addResourcesButton" mnemonicParsing="false" onAction="#startAddResourcesGUI" prefHeight="25.0" prefWidth="650.0" text="Add Resources">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="updateStudentsButton" mnemonicParsing="false" onAction="#startUpdateStudentsGUI" prefHeight="25.0" prefWidth="742.0" text="Update Students">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="shortlistProjectButton" mnemonicParsing="false" onAction="#shortlistProjects" prefHeight="25.0" prefWidth="715.0" text="Shortlist Projects">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="teamMetricsButton" mnemonicParsing="false" onAction="#startTeamMetricsGUI" prefHeight="25.0" prefWidth="732.0" text="Team Metrics">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="quitButton" mnemonicParsing="false" onAction="#setOnCloseRequest" prefHeight="25.0" prefWidth="732.0" text="Quit">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

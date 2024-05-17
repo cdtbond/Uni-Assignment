@@ -1,0 +1,20 @@
+Own3;Jonathon;McCoy;Head of Marketing;Jonathon.McCoy@harrisagents.com.au;Pr5;C14
+Own2;Terry;Lu;HR Specialist;Terry.Lu@Tisk.com.au;Pr2;C2
+Own5;Christine;Moses;Network Engineer;Christine.Moses@ProgramNo1.com.au;Pr3;C4
+Own4;Michelle;Jackman;CIO;Michelle.Jackman@solidgate.com.au;Pr6;C19
+Own1;Devon;Smith;Solution Architect;Devon.Smith@cubing.com.au;Pr1;C12
+Own7;Obella;Christopher;Head of IT;Obella.Christopher@circycirc.com.au;Pr4;C18
+Own20;Kristian;Thompson;Venture Capitalist;Kristian.Thompson@phenomcodey.com.au;Pr13;C15
+Own6;Trixy;Johnson;Angel Investor;Trixy.Johnson@ElevatorK.com.au;Pr15;C3
+Own10;Jeremy;Steer;Company Soothsayer;Jeremy.Steer@codixy.com.au;Pr9;C9
+Own9;Abel;Tron;General Manager of Security;Abel.Tron@GenyCode.com.au;Pr16;C17
+Own11;Michael;Johns;Network Architect;Michael.Johns@wrens&wrens.com.au;Pr17;C6
+Own8;Tina;Arthur;Gaming Developer;Tina.Arthur@Botonix.com.au;Pr20;C16
+Own12;Reginald;Revesby;Security Architect;Reginald.Revesby@blurringcode.com.au;Pr8;C11
+Own13;Bruce;Wang;Security Engineer;Bruce.Wang@tvtools.com.au;Pr14;C10
+Own14;Andrew;Chan;Security Assessor;Andrew.Chan@TrollyLtd.com.au;Pr19;C1
+Own15;Jillian;Murphy;Project Manager;Jillian.Murphy@servicesToArt.com.au;Pr10;C7
+Own16;Marion;O'Connor;Web Developer;Marion.O'Connor@brickbybrick.com.au;Pr11;C20
+Own17;William;Smythe;Automation Engineer;William.Smythe@RetroGameShop.com.au;Pr18;C5
+Own18;Paddy;O'Rourke;Java Developer;Paddy.O'Rourke@broadcastkey.com.au;Pr12;C8
+Own19;Everly;Tran;CEO;Everly.Tran@jamally high.com.au;Pr7;C13

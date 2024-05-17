@@ -1,0 +1,20 @@
+Pr15;Cost Savings - Network;Network cost saving assessment to be conducted by team of 4;Own3;P 2.0;A 4.0;N 3.0;W 1.0
+Pr16;Assessment of Security Posture;Security assessment to be conducted by team of 4;Own2;P 1.0;A 3.0;N 4.0;W 2.0
+Pr13;Fitout Network Architecture;New Office Network Architecture to be conducted by team of 4;Own12;P 1.0;A 4.0;N 2.0;W 3.0
+Pr14;Penetration Testing;Pen Test to be conducted by team of 4;Own9;P 4.0;A 2.0;N 1.0;W 3.0
+Pr11;Training System Implementation;Employee Training system to be implemented by team of 4;Own4;P 4.0;A 1.0;N 3.0;W 2.0
+Pr12;Assessment of Cloud Pricing;Cloud Pricing Assessment to be conducted by team of 4;Own8;P 2.0;A 3.0;N 1.0;W 4.0
+Pr20;Phenomenal - A game inspired by work;Company-inspired game to be built by team of 4;Own19;P 4.0;A 3.0;N 2.0;W 1.0
+Pr10;Project Collaboration tool;Collaboration platform to be implemented by team of 4;Own17;P 1.0;A 2.0;N 3.0;W 4.0
+Pr19;Implement new HR Firing System;HR System to be implemented by team of 4;Own1;P 1.0;A 3.0;N 4.0;W 2.0
+Pr1;Customer Relationship Management (CRM);CRM to be conducted by team of 4;Own6;P 1.0;A 2.0;N 3.0;W 4.0
+Pr17;Line Automation;Factory Line automation to be conducted by team of 4;Own14;P 4.0;A 3.0;N 2.0;W 1.0
+Pr18;Clerk processing automation;Process Automation to be conducted by team of 4;Own5;P 2.0;A 4.0;N 3.0;W 1.0
+Pr3;Migration to Azure Cloud;Cloud Migration to be conducted by team of 4;Own10;P 2.0;A 3.0;N 1.0;W 4.0
+Pr2;Microservices refactoring;Microservices replatform to be conducted by team of 4;Own18;P 4.0;A 1.0;N 3.0;W 2.0
+Pr5;Moving to CICD;Build Pipeline to be implemented by team of 4;Own13;P 4.0;A 2.0;N 1.0;W 3.0
+Pr4;Improving DevOps ToolKit;DevOps Tooling assessment to be conducted by team of 4;Own11;P 1.0;A 4.0;N 2.0;W 3.0
+Pr7;Benefits management software implementation;Benefits Management software to be implemented by team of 4;Own15;P 1.0;A 3.0;N 4.0;W 2.0
+Pr6;Inventory system uplift;Inventory System Upgrade to be conducted by team of 4;Own16;P 2.0;A 4.0;N 3.0;W 1.0
+Pr9;Disk Quota tooling;Disk Quota tool to be implemented by team of 4;Own7;P 2.0;A 1.0;N 4.0;W 3.0
+Pr8;Project Tracking tool;Project tracking to be implemented by team of 4;Own20;P 4.0;A 3.0;N 2.0;W 1.0

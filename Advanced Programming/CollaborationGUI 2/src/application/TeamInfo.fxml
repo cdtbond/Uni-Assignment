@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="395.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TeamInfoController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="841.0" text="Team Information">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Id:" textAlignment="RIGHT">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Title:" textAlignment="RIGHT" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="137.0" prefHeight="17.0" prefWidth="670.0" text="Programming Skill:" textAlignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Analytics and Big Data Skill:" textAlignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Networking &amp; Security Skill:" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Web &amp; Mobile applications Skill:" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="teamIdLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="teamProgSkillLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="teamAnSkillLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="teamTitleLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="teamNetSkillLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="teamWebSkillLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="866.0" text="Student Information">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="10.0" layoutY="38.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="0.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="377.0" minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Id:" textAlignment="RIGHT">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s1IdLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Programming Skill" textAlignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Analytics and Big Data Skill:" textAlignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Networking &amp; Security Skill:" textAlignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Web &amp; Mobile applications Skill:" textAlignment="RIGHT" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Enemy Students:" textAlignment="RIGHT" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Preferences (in order):" textAlignment="RIGHT" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="670.0" text="Personality:" textAlignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s2IdLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3IdLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s1ProgSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s4IdLabel" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2ProgSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s4ProgSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3ProgSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s1AnSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s4AnSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2AnSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3AnSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3NetSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2NetSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s4NetSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s1NetSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s1WebSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s4WebSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2WebSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3WebSkill" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3Personality" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2Personality" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s4Personality" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s1Personality" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s1Prefs" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s4Prefs" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2Prefs" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3Prefs" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s1Enemies" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="s4Enemies" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2Enemies" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="s3Enemies" prefHeight="17.0" prefWidth="670.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Button fx:id="returnToTeamMetricsButton" mnemonicParsing="false" onAction="#returnToTeamMetrics" prefHeight="25.0" prefWidth="896.0" text="Return To Team Metrics">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
